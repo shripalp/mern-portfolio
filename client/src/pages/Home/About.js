@@ -25,8 +25,18 @@ function About() {
           ></lottie-player>
         </div>
         <div className="flex flex-col gap-5 w-1/2 sm:w-full">
-          <p className="text-white">hello</p>
-          <p className="text-white">my name is shripal</p>
+          <p className="text-white">
+            Nisi sint reprehenderit et excepteur sit. Qui officia dolore ea
+            exercitation cupidatat et tempor. Aliquip laboris veniam nostrud
+            deserunt irure labore.
+          </p>
+          <p className="text-white">
+            Enim fugiat occaecat laboris in exercitation. Magna adipisicing aute
+            officia ut mollit aliquip sint est aliquip exercitation amet veniam
+            proident duis. Enim irure Lorem commodo nisi fugiat nostrud amet
+            dolor aute mollit labore proident aliqua dolore. Anim culpa anim in
+            ad exercitation esse eiusmod cillum consectetur ex.
+          </p>
         </div>
       </div>
       <div className="py-5">

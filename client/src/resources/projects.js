@@ -1,6 +1,5 @@
 export const projects = [
   {
-    _id: "1",
     technologies: [],
     title: "PiZZA",
     image:
@@ -10,7 +9,6 @@ export const projects = [
     link: "/",
   },
   {
-    _id: "2",
     technologies: [],
     title: "PAsta",
     image:
@@ -20,7 +18,6 @@ export const projects = [
     link: "/",
   },
   {
-    _id: "3",
     technologies: [],
     title: "Rice",
     image:
@@ -30,7 +27,6 @@ export const projects = [
     link: "/",
   },
   {
-    _id: "4",
     technologies: [],
     title: "Flower",
     image:

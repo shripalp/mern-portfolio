@@ -1,16 +1,12 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
+import { useSelector } from "react-redux";
 
 function About() {
-  const skills = [
-    "javascript",
-    "python",
-    "mongoDB",
-    "REACT",
-    "express",
-    "nodeJS",
-    "Django",
-  ];
+  const { portfolioData } = useSelector((state) => state.root);
+  const { about } = portfolioData;
+
+  const { skills, lottieURL, description1, description2 } = about;
 
   return (
     <div>
@@ -18,25 +14,15 @@ function About() {
       <div className="flex w-full items-center sm:flex-col">
         <div className="h-[70vh] w-1/2 sm:w-full">
           <lottie-player
-            src="https://assets3.lottiefiles.com/private_files/lf30_obidsi0t.json"
+            src={lottieURL}
             background="transparent"
             speed="1"
             autoplay
           ></lottie-player>
         </div>
         <div className="flex flex-col gap-5 w-1/2 sm:w-full">
-          <p className="text-white">
-            Nisi sint reprehenderit et excepteur sit. Qui officia dolore ea
-            exercitation cupidatat et tempor. Aliquip laboris veniam nostrud
-            deserunt irure labore.
-          </p>
-          <p className="text-white">
-            Enim fugiat occaecat laboris in exercitation. Magna adipisicing aute
-            officia ut mollit aliquip sint est aliquip exercitation amet veniam
-            proident duis. Enim irure Lorem commodo nisi fugiat nostrud amet
-            dolor aute mollit labore proident aliqua dolore. Anim culpa anim in
-            ad exercitation esse eiusmod cillum consectetur ex.
-          </p>
+          <p className="text-white">{description1}</p>
+          <p className="text-white">{description2}</p>
         </div>
       </div>
       <div className="py-5">

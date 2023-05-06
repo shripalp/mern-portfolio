@@ -1,9 +1,15 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
-import { experiences } from "../../resources/experiences";
+//import { experiences } from "../../resources/experiences";
+import { useSelector } from "react-redux";
 
 function Experiences() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
+  const { portfolioData } = useSelector((state) => state.root);
+  const { experiences } = portfolioData;
+
+  //const { title, duration, company, description } = experiences;
+
   return (
     <div>
       <SectionTitle title="Experience" />
@@ -23,7 +29,7 @@ function Experiences() {
                     : "text-white"
                 }`}
               >
-                {exp.period}
+                {exp.duration}
               </h1>
             </div>
           ))}
@@ -36,12 +42,7 @@ function Experiences() {
             {experiences[selectedItemIndex].company}
           </h1>
           <p className="text-white">
-            Mollit tempor amet adipisicing irure sint officia cillum sint
-            excepteur labore sint. Officia aute aliqua adipisicing deserunt
-            anim. Ad quis dolor proident minim sit magna nostrud nulla cupidatat
-            enim ullamco et aute eu. Ullamco pariatur fugiat sint est quis minim
-            culpa laborum deserunt. Ad et deserunt aliquip velit quis deserunt
-            cupidatat.
+            {experiences[selectedItemIndex].description}
           </p>
         </div>
       </div>

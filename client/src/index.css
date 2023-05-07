@@ -76,3 +76,16 @@ i:hover {
     opacity: 1;
   }
 }
+
+/*Input*/
+.input {
+  height: 40px;
+  border: 1px solid gray;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid rgb(56, 56, 56);
+}

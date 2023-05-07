@@ -4,6 +4,7 @@ const rootSlice = createSlice({
   initialState: {
     loading: false,
     portfolioData: null,
+    reloadData: false,
   },
   reducers: {
     ShowLoading: (state, action) => {
@@ -15,8 +16,12 @@ const rootSlice = createSlice({
     SetPortFolioData: (state, action) => {
       state.portfolioData = action.payload;
     },
+    ReloadData: (state, action) => {
+      state.reloadData = action.payload;
+    },
   },
 });
 
 export default rootSlice.reducer;
-export const { ShowLoading, HideLoading, SetPortFolioData } = rootSlice.actions;
+export const { ShowLoading, HideLoading, SetPortFolioData, ReloadData } =
+  rootSlice.actions;

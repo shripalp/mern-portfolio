@@ -4,7 +4,7 @@ import { ShowLoading, HideLoading, ReloadData } from "../../redux/rootSlice";
 import axios from "axios";
 import { Modal, Form, message, Button } from "antd";
 
-function Experiences() {
+function AdminExperiences() {
   const dispatch = useDispatch();
   const { portfolioData } = useSelector((state) => state.root);
   const { experiences } = portfolioData;
@@ -166,4 +166,4 @@ function Experiences() {
   );
 }
 
-export default Experiences;
+export default AdminExperiences;

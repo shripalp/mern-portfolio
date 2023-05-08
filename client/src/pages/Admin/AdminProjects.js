@@ -82,8 +82,8 @@ function AdminProjects() {
           <div className="shadow border border-gray-400 p-5 flex flex-col">
             <h1 className="text-primary text-xl font-bold">{project.title}</h1>
             <hr />
-            <img src={project.image} alt="" className="h-60 w-80" />
-            <h1> {project.title}</h1>
+            <img src={project.image} alt="" className="h-60 w-80 py-2" />
+
             <h1>{project.description}</h1>
 
             <div className="flex justify-end gap-5 mt-5">

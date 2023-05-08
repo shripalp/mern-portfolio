@@ -82,7 +82,7 @@ function AdminCourses() {
           <div className="shadow border border-gray-400 p-5 flex flex-col">
             <h1 className="text-primary text-xl font-bold">{course.title}</h1>
             <hr />
-            <img src={course.image} alt="" className="h-60 w-80 roundrd" />
+            <img src={course.image} alt="" className="h-60 w-80 rounded py-2" />
 
             <h1>{course.description}</h1>
             <h1> {course.link}</h1>

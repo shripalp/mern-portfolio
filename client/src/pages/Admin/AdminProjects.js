@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ShowLoading, HideLoading, ReloadData } from "../../redux/rootSlice";
 import axios from "axios";
-import { Modal, Form, message, Button } from "antd";
+import { Modal, Form, message } from "antd";
 
 function AdminProjects() {
   const dispatch = useDispatch();
@@ -66,7 +66,7 @@ function AdminProjects() {
   return (
     <div>
       <div className="flex justify-end">
-        <Button
+        <button
           className="bg-primary text-white font-semibold px-5 py-2"
           onClick={() => {
             setSelectedItemForEdit(null);
@@ -75,7 +75,7 @@ function AdminProjects() {
           }}
         >
           Add project
-        </Button>
+        </button>
       </div>
       <div className="grid grid-cols-3 gap-5 mt-5 sm:grid-cols-1">
         {projects.map((project) => (
@@ -87,7 +87,7 @@ function AdminProjects() {
             <h1>{project.description}</h1>
 
             <div className="flex justify-end gap-5 mt-5">
-              <Button
+              <button
                 className="bg-red-500 text-white px-5 py-2"
                 onClick={() => {
                   onDelete(project);
@@ -95,8 +95,8 @@ function AdminProjects() {
                 }}
               >
                 Delete
-              </Button>
-              <Button
+              </button>
+              <button
                 className="bg-primary text-white px-5 py-2"
                 onClick={() => {
                   setSelectedItemForEdit(project);
@@ -106,7 +106,7 @@ function AdminProjects() {
                 }}
               >
                 Edit
-              </Button>
+              </button>
             </div>
           </div>
         ))}
@@ -151,26 +151,18 @@ function AdminProjects() {
             </Form.Item>
 
             <div className="flex justify-end">
-              <Button
+              <button
                 className="border-primary text-primary px-5 py-2"
-                htmlType="Button"
                 onClick={() => {
                   setShowEditModal(false);
                   setSelectedItemForEdit(null);
                 }}
               >
                 Cancel
-              </Button>
-              <Button
-                className="bg-primary text-white px-5 py-2"
-                htmlType="submit"
-                onClick={() => {
-                  setShowEditModal(false);
-                  setSelectedItemForEdit(null);
-                }}
-              >
+              </button>
+              <button className="bg-primary text-white px-5 py-2">
                 {selectedItemForEdit ? "update" : "add"}
-              </Button>
+              </button>
             </div>
           </Form>
         </Modal>

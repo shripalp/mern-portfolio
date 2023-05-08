@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ShowLoading, HideLoading, ReloadData } from "../../redux/rootSlice";
 import axios from "axios";
-import { Modal, Form, message, Button } from "antd";
+import { Modal, Form, message } from "antd";
 
 function AdminExperiences() {
   const dispatch = useDispatch();
@@ -64,7 +64,7 @@ function AdminExperiences() {
   return (
     <div>
       <div className="flex justify-end">
-        <Button
+        <button
           className="bg-primary text-white font-semibold px-5 py-2"
           onClick={() => {
             setSelectedItemForEdit(null);
@@ -73,7 +73,7 @@ function AdminExperiences() {
           }}
         >
           Add Experience
-        </Button>
+        </button>
       </div>
       <div className="grid grid-cols-4 gap-5 mt-5 sm:grid-cols-1">
         {experiences.map((experience) => (
@@ -86,7 +86,7 @@ function AdminExperiences() {
             <h1> Role: {experience.title}</h1>
             <h1>{experience.description}</h1>
             <div className="flex justify-end gap-5 mt-5">
-              <Button
+              <button
                 className="bg-red-500 text-white px-5 py-2"
                 onClick={() => {
                   onDelete(experience);
@@ -94,8 +94,8 @@ function AdminExperiences() {
                 }}
               >
                 Delete
-              </Button>
-              <Button
+              </button>
+              <button
                 className="bg-primary text-white px-5 py-2"
                 onClick={() => {
                   setSelectedItemForEdit(experience);
@@ -105,7 +105,7 @@ function AdminExperiences() {
                 }}
               >
                 Edit
-              </Button>
+              </button>
             </div>
           </div>
         ))}
@@ -138,26 +138,18 @@ function AdminExperiences() {
               <input className="input" placeholder="Description" />
             </Form.Item>
             <div className="flex justify-end">
-              <Button
+              <button
                 className="border-primary text-primary px-5 py-2"
-                htmlType="Button"
                 onClick={() => {
                   setShowEditModal(false);
                   setSelectedItemForEdit(null);
                 }}
               >
                 Cancel
-              </Button>
-              <Button
-                className="bg-primary text-white px-5 py-2"
-                htmlType="submit"
-                onClick={() => {
-                  setShowEditModal(false);
-                  setSelectedItemForEdit(null);
-                }}
-              >
+              </button>
+              <button className="bg-primary text-white px-5 py-2">
                 {selectedItemForEdit ? "update" : "add"}
-              </Button>
+              </button>
             </div>
           </Form>
         </Modal>

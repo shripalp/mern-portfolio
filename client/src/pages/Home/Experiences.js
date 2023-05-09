@@ -14,7 +14,7 @@ function Experiences() {
     <div>
       <SectionTitle title="Experience" />
       <div className="flex py-10 gap-20 sm:flex-col">
-        <div className="flex flex-col gap-10 border-l-2 border-[#135e4c82] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full">
+        <div className="flex flex-col gap-10 border-l-2 border-[#135e4c82] w-1/4 sm:flex-row sm:overflow-x-scroll sm:w-full">
           {experiences.map((exp, index) => (
             <div
               onClick={() => {
@@ -34,7 +34,7 @@ function Experiences() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 w-3/4">
           <h1 className="text-secondary text-xl">
             {experiences[selectedItemIndex].title}
           </h1>

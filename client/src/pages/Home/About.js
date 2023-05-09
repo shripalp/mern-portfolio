@@ -10,7 +10,7 @@ function About() {
 
   return (
     <div>
-      <SectionTitle title="About" />
+      <SectionTitle title="About Me" />
       <div className="flex w-full items-center sm:flex-col">
         <div className="h-[70vh] w-1/2 sm:w-full">
           <lottie-player
@@ -27,11 +27,11 @@ function About() {
       </div>
       <div className="py-5">
         <h1 className="text-tertiary text-xl">
-          Here are few technologies I am working with
+          Here are few technologies I am working with:
         </h1>
         <div className="flex flex-wrap gap-10 mt-5">
           {skills.map((skill, index) => (
-            <div className="border border-tertiary py-3 px-10">
+            <div className="border border-tertiary py-2 px-8">
               <h1 className="text-tertiary" key={index}>
                 {skill}
               </h1>

@@ -84,8 +84,7 @@ function AdminCourses() {
             <hr />
             <img src={course.image} alt="" className="h-60 w-80 rounded py-2" />
 
-            <h1>{course.description}</h1>
-            <h1> {course.link}</h1>
+            <h1 className="text-lg font-semibold">{course.description}</h1>
 
             <div className="flex justify-end gap-5 mt-5">
               <button

@@ -10,7 +10,7 @@ function Projects() {
     <div>
       <SectionTitle title="Projects" />
       <div className="flex py-10 gap-20 sm:flex-col">
-        <div className="flex flex-col gap-10 border-l-2 border-[#135e4c82] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full">
+        <div className="flex flex-col gap-10 border-l-2 border-[#135e4c82] w-1/4 sm:flex-row sm:overflow-x-scroll sm:w-full">
           {projects.map((project, index) => (
             <div
               onClick={() => {
@@ -30,11 +30,11 @@ function Projects() {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-10 sm:flex-col">
+        <div className="flex items-center justify-center gap-10 w-3/4 sm:flex-col">
           <img
             src={projects[selectedItemIndex].image}
             alt="logo"
-            className="h-60 w-72"
+            className="h-60 w-72 hover:scale-150"
           />
           <div className="flex flex-col gap-5">
             <h1 className="text-secondary text-xl">
@@ -43,6 +43,16 @@ function Projects() {
             <p className="text-white">
               {projects[selectedItemIndex].description}
             </p>
+            <div className="flex flex-wrap text-white gap-3 mt-1">
+              Tech Stack:
+              {projects[selectedItemIndex].technologies.map((skill, index) => (
+                <div className="px-2">
+                  <h1 className="text-tertiary" key={index}>
+                    {skill}
+                  </h1>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -8,6 +8,8 @@ const {
   Contact,
 } = require("../models/portfolioModel");
 
+const { User } = require("../models/userModel");
+
 //get all portfolio data
 router.get("/get-portfolio-data", async (req, res) => {
   try {

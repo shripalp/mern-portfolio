@@ -5,15 +5,12 @@ function Intro() {
   const { portfolioData } = useSelector((state) => state.root);
   const { intro } = portfolioData;
 
-  const { firstName, lastName, welcomeText, description, caption } = intro;
+  const { firstName, lastName, welcomeText, description, caption, image } =
+    intro;
   return (
     <div className="flex gap-10 py-10 sm:flex-col">
-      <div className="w-1/3 text-white">
-        <img
-          className="rounded-3xl"
-          src="https://media.licdn.com/dms/image/C5603AQErdYQEhffgmQ/profile-displayphoto-shrink_800_800/0/1611635027933?e=2147483647&v=beta&t=g7m1V8P7sPjXhWpgnVB2c0EOmwESJJ5AODjj-m-Br9w"
-          alt="myPic"
-        />
+      <div className="w-1/3 text-white sm:w-full">
+        <img className="rounded-3xl" src={image} alt="myPic" />
       </div>
       <div className="h-[80vh] bg-primary flex flex-col items-start justify-center gap-8 w-2/3">
         <h1 className="text-white text-2xl font-semibold">

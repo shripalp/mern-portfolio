@@ -41,7 +41,7 @@ function Experiences() {
           <h1 className="text-tertiary text-xl">
             {experiences[selectedItemIndex].company}
           </h1>
-          <p className="text-white">
+          <p className="text-white text-xl">
             {experiences[selectedItemIndex].description}
           </p>
         </div>

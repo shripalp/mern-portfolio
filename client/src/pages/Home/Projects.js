@@ -43,6 +43,7 @@ function Projects() {
             <p className="text-white">
               {projects[selectedItemIndex].description}
             </p>
+            <a className="text-tertiary" href={projects[selectedItemIndex].link}>Visit the site</a>
             <div className="flex flex-wrap text-white gap-3 mt-1">
               Tech Stack:
               {projects[selectedItemIndex].technologies.map((skill, index) => (
